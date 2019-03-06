@@ -1,0 +1,209 @@
+/Users/irene/anaconda/lib/python3.5/site-packages/pymysql/cursors.py:329: Warning: (1050, "Table 'TableDefinitions' already exists")
+  self._do_get_result()
+/Users/irene/anaconda/lib/python3.5/site-packages/pymysql/cursors.py:329: Warning: (1050, "Table 'IndexDefinitions' already exists")
+  self._do_get_result()
+/Users/irene/anaconda/lib/python3.5/site-packages/pymysql/cursors.py:329: Warning: (1050, "Table 'ColumnDefinitions' already exists")
+  self._do_get_result()
+
+
+********************    Starting test_create_table_4_fail    ********************
+
+
+Exception e =  DataTableException: code: Invalid key columns, message: -1000
+
+
+********************    SUCCESS test_create_table_4_fail should fail.    ********************
+
+
+
+
+********************    Starting test_create_table_5_prep    ********************
+
+
+Batting table {
+  "columns": [
+    {
+      "column_name": "playerID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "teamID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "yearID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "stint",
+      "not_null": 1,
+      "column_type": "number"
+    },
+    {
+      "column_name": "H",
+      "not_null": 0,
+      "column_type": "number"
+    },
+    {
+      "column_name": "AB",
+      "not_null": 0,
+      "column_type": "number"
+    }
+  ],
+  "defintion": {
+    "name": "batting",
+    "path": "/Users/irene/Batting.csv"
+  },
+  "indexes": {
+    "PRIMARY": {
+      "columns": [
+        "playerID",
+        " teamID",
+        " yearID",
+        " stint"
+      ],
+      "index_name": "PRIMARY",
+      "kind": "PRIMARY"
+    }
+  }
+}
+
+
+********************    Completed test_create_table_5_prep    ********************
+
+
+
+
+********************    Starting test_create_table_5    ********************
+
+
+Second created failed with e =  DataTableException: code: -101 , message: Table name %s is duplicate batting
+Initial status of table = 
+ {
+  "columns": [
+    {
+      "column_name": "playerID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "teamID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "yearID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "stint",
+      "not_null": 1,
+      "column_type": "number"
+    },
+    {
+      "column_name": "H",
+      "not_null": 0,
+      "column_type": "number"
+    },
+    {
+      "column_name": "AB",
+      "not_null": 0,
+      "column_type": "number"
+    }
+  ],
+  "defintion": {
+    "name": "batting",
+    "path": "/Users/irene/Batting.csv"
+  },
+  "indexes": {
+    "PRIMARY": {
+      "columns": [
+        "playerID",
+        " teamID",
+        " yearID",
+        " stint"
+      ],
+      "index_name": "PRIMARY",
+      "kind": "PRIMARY"
+    }
+  }
+}
+Modified status of table = 
+ {
+  "columns": [
+    {
+      "column_name": "playerID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "teamID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "yearID",
+      "not_null": 1,
+      "column_type": "text"
+    },
+    {
+      "column_name": "stint",
+      "not_null": 1,
+      "column_type": "number"
+    },
+    {
+      "column_name": "H",
+      "not_null": 0,
+      "column_type": "number"
+    },
+    {
+      "column_name": "AB",
+      "not_null": 0,
+      "column_type": "number"
+    },
+    {
+      "column_name": "HR",
+      "not_null": 0,
+      "column_type": "number"
+    },
+    {
+      "column_name": "G",
+      "not_null": 0,
+      "column_type": "number"
+    }
+  ],
+  "defintion": {
+    "name": "batting",
+    "path": "/Users/irene/Batting.csv"
+  },
+  "indexes": {
+    "PRIMARY": {
+      "columns": [
+        "playerID",
+        " teamID",
+        " yearID",
+        " stint"
+      ],
+      "index_name": "PRIMARY",
+      "kind": "PRIMARY"
+    },
+    "team_year_idx": {
+      "columns": [
+        "teamID",
+        " yearID"
+      ],
+      "index_name": "team_year_idx",
+      "kind": "INDEX"
+    }
+  }
+}
+
+
+********************    Success test_create_table_5    ********************
+
+
+[Finished in 0.6s]

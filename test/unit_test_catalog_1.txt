@@ -1,0 +1,126 @@
+********************    Starting test_create_table_1    ********************
+
+
+People table {"columns": [], "indexes": {}, "defintion": {"name": "people", "path": "Users/irene/People.csv"}}
+
+
+********************    Complete test_create_table_1    ********************
+
+
+
+
+********************    Starting test_create_table_2_fail    ********************
+
+
+Second created failed with e =  DataTableException: code: -101 , message: Table name %s is duplicate people
+
+
+********************    INCORRECT end for  test_create_table_2_fail    ********************
+
+
+
+
+********************    Starting test_create_table_3    ********************
+
+
+People table {
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": 1
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": 1
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": 0
+    }
+  ],
+  "indexes": {},
+  "defintion": {
+    "name": "people",
+    "path": "/Users/irene/People.csv"
+  }
+}
+
+
+********************    Complete test_create_table_3    ********************
+
+
+
+
+********************    Starting test_create_table_3_fail    ********************
+
+
+Exception e =  DataTableException: code: -100 , message: Column canary definition is invalid.
+
+
+********************    Complete test_create_table_3_fail successfully    ********************
+
+
+
+
+********************    Starting test_create_table_4    ********************
+
+
+People table {
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": 1
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": 1
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": 1
+    },
+    {
+      "column_name": "stint",
+      "column_type": "number",
+      "not_null": 1
+    },
+    {
+      "column_name": "H",
+      "column_type": "number",
+      "not_null": 0
+    },
+    {
+      "column_name": "AB",
+      "column_type": "number",
+      "not_null": 0
+    }
+  ],
+  "indexes": {
+    "PRIMARY": {
+      "columns": [
+        "playerID",
+        " teamID",
+        " yearID",
+        " stint"
+      ],
+      "kind": "PRIMARY",
+      "index_name": "PRIMARY"
+    }
+  },
+  "defintion": {
+    "name": "batting",
+    "path": "/Users/irene/Batting.csv"
+  }
+}
+
+
+********************    Complete test_create_table_4    ********************
+
+
+[Finished in 1.2s]
